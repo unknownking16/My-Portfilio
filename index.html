@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Himanshu | Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+    <script defer src="script.js"></script>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header id="home">
+        <div class="hero">
+            <nav class="navbar">
+                <div class="logo">Himanshu</div>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="menu-toggle">&#9776;</div>
+            </nav>
+            <div class="hero-content">
+                <h1>Hi, I'm <span>Himanshu Goswami</span></h1>
+                <p>Software Developer | Full-Stack Enthusiast</p>
+                <a href="#projects" class="btn">View Projects</a>
+            </div>
+        </div>
+    </header>
+    
+    <!-- About Section -->
+    <section id="about">
+        <h2>About Me</h2>
+        <p>🚀 <strong>Passionate Software Developer | Python | SQL | Full-Stack Development</strong></p>
+        
+        <p>
+            I am a Software Developer with a strong foundation in Python, SQL, and full-stack development. My expertise lies in building scalable, efficient, and secure applications, with a keen interest in backend development, database optimization, and system architecture.
+        </p>
+    
+        <h3>What I Bring to the Table:</h3>
+        <ul>
+            <li>✔️ <strong>Backend Development:</strong> Proficient in Python (Django, Flask) and Node.js (Express.js) for robust server-side applications.</li>
+            <li>✔️ <strong>Database Management:</strong> Experienced in SQL (MySQL, PostgreSQL, Snowflake) with a focus on query optimization and performance tuning.</li>
+            <li>✔️ <strong>Frontend Development:</strong> Knowledge of React.js, HTML, CSS, JavaScript to create responsive and interactive UI.</li>
+            <li>✔️ <strong>Problem-Solving & DSA:</strong> Strong understanding of Data Structures and Algorithms (DSA) to write optimized and scalable code.</li>
+            <li>✔️ <strong>Version Control & Collaboration:</strong> Skilled in Git, GitHub, and working with development teams for seamless project execution.</li>
+        </ul>
+    
+        <h3>Projects & Experience:</h3>
+        <ul>
+            <li>🔹 <strong>Task Management System:</strong> Built a full-stack web application using React.js, Node.js, and SQL for managing daily tasks efficiently.</li>
+            <li>🔹 <strong>E-commerce Product Catalog:</strong> Developed a dynamic catalog using Django and PostgreSQL, enabling advanced product search and filtering.</li>
+        </ul>
+    
+        <p>
+            I am passionate about learning new technologies, solving complex problems, and contributing to high-impact software projects. Looking forward to connecting and collaborating with like-minded professionals!
+        </p>
+    
+        <p>💡 <strong>Let’s connect and innovate together!</strong></p>
+    </section>
+    
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="projects-container">
+    
+            <div class="project-card">
+                <img src="images/task.jpg" alt="Task Management System">
+                <div class="project-info">
+                    <h3>🔹 Task Management System</h3>
+                    <p>Built a full-stack web application using <strong>React.js, Node.js, and SQL</strong> to efficiently manage daily tasks.</p>
+                    <a href="#" class="project-link">View Project</a>
+                </div>
+            </div>
+    
+            <div class="project-card">
+                <img src="images/e-comorse.jpg" alt="E-commerce Product Catalog">
+                <div class="project-info">
+                    <h3>🔹 E-commerce Product Catalog</h3>
+                    <p>Developed a dynamic catalog using <strong>Django and PostgreSQL</strong>, enabling product search, filtering, and cart management.</p>
+                    <a href="#" class="project-link">View Project</a>
+                </div>
+            </div>
+    
+            <div class="project-card">
+                <img src="images/online.jpg" alt="Online Code Editor">
+                <div class="project-info">
+                    <h3>🔹 Online Code Editor</h3>
+                    <p>A real-time code editor using <strong>React, Monaco Editor, Tailwind CSS, and Firebase</strong> for writing and executing code.</p>
+                    <a href="#" class="project-link">View Project</a>
+                </div>
+            </div>
+    
+            <div class="project-card">
+                <img src="images/sales.jpg" alt="Sales Data Analysis & Reporting">
+                <div class="project-info">
+                    <h3>🔹 Sales Data Analysis & Reporting</h3>
+                    <p>Created a dashboard using <strong>Python, Pandas, and Matplotlib</strong> to visualize sales trends and generate reports.</p>
+                    <a href="#" class="project-link">View Project</a>
+                </div>
+            </div>
+    
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form id="contact-form">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <textarea id="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+        <p id="form-status"></p>
+    </section>
+    
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const text = "Hi, I'm Himanshu Goswami";
+            let index = 0;
+        
+            function typeText() {
+                const heading = document.querySelector("h1");
+                heading.textContent = text.substring(0, index);
+                index++;
+        
+                if (index <= text.length) {
+                    setTimeout(typeText, 100);
+                }
+            }
+        
+            // Ensure h1 starts empty before animation
+            document.querySelector("h1").textContent = "";
+            typeText();
+        });
+        </script>
+
+</body>
+</html>
